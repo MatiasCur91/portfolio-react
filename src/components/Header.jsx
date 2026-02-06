@@ -1,8 +1,8 @@
 function Header() {
   return (
     <header>
-      <h1>Iván Curbelo</h1>
-      <p>Desarrollador en formación | React</p>
+      <h1>Matias Curbelo</h1>
+      <p>Desarrollador | React</p>
     </header>
   )
 }
