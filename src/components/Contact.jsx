@@ -1,4 +1,6 @@
 import { useState } from "react"
+import styles from "./Contact.module.css"
+
 
 const initialForm = {
   name: "",
@@ -33,48 +35,52 @@ function Contact() {
   }
 
   return (
-    <section>
-      <h2>Contacto</h2>
+     <section className={styles.section}>
+    <h2>Contacto</h2>
 
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Nombre</label><br />
-          <input
-            type="text"
-            name="name"
-            value={form.name}
-            onChange={handleChange}
-          />
-        </div>
+    <form className={styles.form} onSubmit={handleSubmit}>
+      <div>
+        <label>Nombre</label><br />
+        <input
+          className={styles.input}
+          type="text"
+          name="name"
+          value={form.name}
+          onChange={handleChange}
+        />
+      </div>
 
-        <div>
-          <label>Email</label><br />
-          <input
-            type="email"
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-          />
-        </div>
+      <div>
+        <label>Email</label><br />
+        <input
+          className={styles.input}
+          type="email"
+          name="email"
+          value={form.email}
+          onChange={handleChange}
+        />
+      </div>
 
-        <div>
-          <label>Mensaje</label><br />
-          <textarea
-            name="message"
-            value={form.message}
-            onChange={handleChange}
-          />
-        </div>
+      <div>
+        <label>Mensaje</label><br />
+        <textarea
+          className={styles.textarea}
+          name="message"
+          value={form.message}
+          onChange={handleChange}
+        />
+      </div>
 
-        <button
-          type="submit"
-          disabled={!form.name || !form.email}
-        >
-          Enviar
-        </button>
-      </form>
-    </section>
-  )
+      <button
+        className={styles.button}
+        type="submit"
+        disabled={!form.name || !form.email}
+      >
+        Enviar
+      </button>
+    </form>
+  </section>
+)
 }
 
 export default Contact

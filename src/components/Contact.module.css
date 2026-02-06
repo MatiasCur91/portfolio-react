@@ -1,0 +1,30 @@
+.section {
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input,
+.textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button {
+  padding: 10px;
+  background-color: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
