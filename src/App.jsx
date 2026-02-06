@@ -1,6 +1,7 @@
 import Header from "./components/Header"
 import Counter from "./components/Counter"
 import Skills from "./components/Skills"
+import Projects from "./components/Projects"
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Counter />
       <Skills />
+      <Projects />
     </div>
   )
 }
