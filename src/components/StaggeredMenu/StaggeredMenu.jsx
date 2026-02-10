@@ -69,11 +69,19 @@ const addToRefs = (el) => {
         <>
             {/* Botón */}
             <button
-                className={styles.menuToggle}
-                onClick={() => setOpen(true)}
-                style={{ opacity: open ? 0 : 1, pointerEvents: open ? "none" : "auto" }}
+                className={`${styles.menuToggle} ${open ? styles.menuToggleOpen : ""}`}
+                onClick={() => setOpen(!open)}
+                aria-label={open ? "Cerrar menú" : "Abrir menú"}
             >
-                Menu
+                {open ? (
+                    <>
+                        Close <span className={styles.closeIcon}>×</span>
+                    </>
+                ) : (
+                     <>
+                        Menu <span className={styles.closeIcon}>☰</span>
+                    </>
+                )}
             </button>
 
             {/* Overlay */}

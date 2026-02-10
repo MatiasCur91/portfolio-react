@@ -8,19 +8,37 @@
   border-radius: 999px;
 
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: white;
+  border: none;              /* 👈 ESTO */
+  outline: none;             /* 👈 opcional pero recomendado */
 
+  color: white;
   font-size: 14px;
   letter-spacing: 0.05em;
   cursor: pointer;
 
-  transition: background 0.2s ease, border 0.2s ease;
+  transition: background 0.2s ease;
+}
+.menuToggle:focus,
+.menuToggle:focus-visible {
+  outline: none;
+}
+
+
+.menuToggleOpen {
+  color: #020617;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+}
+
+.closeIcon {
+  font-size: 18px;
+  margin-left: 6px;
+  line-height: 1;
 }
 
 .menuToggle:hover {
   background: rgba(255, 255, 255, 0.08);
-  border-color: white;
+  
 }
 
 /* OVERLAY */
